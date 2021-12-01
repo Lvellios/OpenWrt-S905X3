@@ -113,4 +113,4 @@ jobs:
         body: |
           Default IP：192.168.0.254
           Default PW： password
-        artifacts: "/opt/openwrt_packit/output*"   
+        artifacts: "/opt/openwrt_packit/output/*"
