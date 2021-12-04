@@ -23,10 +23,12 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - flippy_name: Plus
-            release_name: OpenWrt_S905X3_5.15.5_67+.img
-          - flippy_name: MinusO
-            release_name: OpenWrt_S905X3_5.4.162-67+o.img
+          - flippy_name: First_Plus
+            release_name: OpenWrt_S905X3_5.14.21_67+.img
+          - flippy_name: Secoud_Plus
+            release_name: OpenWrt_S905X3_5.10.83-67+.img
+          - flippy_name: Minus_O
+            release_name: OpenWrt_S905X3_5.4.163-67+o.img
 
     env:
       FLIPPY_NAME: ${{ matrix.flippy_name }}   
