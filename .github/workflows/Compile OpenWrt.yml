@@ -26,9 +26,9 @@ jobs:
           - flippy_name: First_Plus
             release_name: OpenWrt_S905X3_5.14.21_67+.img
           - flippy_name: Secoud_Plus
-            release_name: OpenWrt_S905X3_5.10.83_67+.img
+            release_name: OpenWrt_S905X3_5.10.88_68+.img
           - flippy_name: Minus_O
-            release_name: OpenWrt_S905X3_5.4.163_67+o.img
+            release_name: OpenWrt_S905X3_5.4.168_68+o.img
 
     env:
       FLIPPY_NAME: ${{ matrix.flippy_name }}   
