@@ -113,6 +113,6 @@ jobs:
         commit: main
         token: ${{ secrets.RELEASES_TOKEN }}
         body: 
-          Default IP: 192.168.0.254
-          Default PW: password
+          Default IP:：192.168.0.254
+          Default PW：password
         artifacts: "/opt/openwrt_packit/output/*"
