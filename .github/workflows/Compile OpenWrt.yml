@@ -49,13 +49,13 @@ jobs:
 
     - name: Download
       run: |
-        cd /opt/packit
+        cd /opt/kernel
         
         wget  https://github.com/Lvellios/Compile-Kernel/releases/download/$version/openwrt-armvirt-64-default-rootfs.tar.gz
                 
     - name: Check The Files
       run: |
-        cd /opt/packit
+        cd /opt/kernel
         ls
                 
     - name: Install The Packages
@@ -83,15 +83,15 @@ jobs:
     - name: Pigz -9
       id: pigz
       run: |
-        sudo chmod -R 777 /opt/packit/output
-        cd /opt/packit/output
+        sudo chmod -R 777 /opt/kernel/tmp
+        cd /opt/kernel/tmp
         sudo pigz -9 $RELEASE_NAME
 
         echo "::set-output name=status::success"
 
     - name: Check The Files
       run: |
-        cd /opt/packit/output
+        cd /opt/kernel/tmp
         ls
 
     - name: Check The Space Usage
