@@ -49,13 +49,13 @@ jobs:
                 
     - name: Download
       run: 
-        cd /opt/openwrt_packit
+        cd /opt/packit
         
         wget  https://github.com/Lvellios/Compile-Kernel/releases/download/$version/openwrt-armvirt-64-default-rootfs.tar.gz
                 
     - name: Check The Files
       run: 
-        cd /opt/openwrt_packit
+        cd /opt/packit
         ls
                 
     - name: Install The Packages
@@ -71,27 +71,27 @@ jobs:
     - name: Build The Firmware
       run: 
         sudo chmod  -R 777 /opt
-        cd /opt/openwrt_packit
+        cd /opt/packit
         sudo chmod +x mk_s905x3_multi.sh
         sudo ./mk_s905x3_multi.sh
         
     - name: Copy The Update Files
       run: 
-        cd /opt/openwrt_packit
+        cd /opt/packit
         sudo cp files/update-amlogic-openwrt.sh output/update-amlogic-openwrt.sh
         
     - name: Pigz -9
       id: pigz
       run: 
-        sudo chmod -R 777 /opt/openwrt_packit/output
-        cd /opt/openwrt_packit/output
+        sudo chmod -R 777 /opt/packit/output
+        cd /opt/packit/output
         sudo pigz -9 $RELEASE_NAME
 
         echo "::set-output name=status::success"
 
     - name: Check The Files
       run: 
-        cd /opt/openwrt_packit/output
+        cd /opt/packit/output
         ls
 
     - name: Check The Space Usage
@@ -115,4 +115,4 @@ jobs:
         body: 
           Default IP:：192.168.0.254
           Default PW：password
-        artifacts: "/opt/openwrt_packit/output/*"
+        artifacts: "/opt/packit/output/*"
