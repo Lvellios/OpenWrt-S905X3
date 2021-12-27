@@ -25,7 +25,7 @@ jobs:
         include:
           - flippy_name: First
             release_name: OpenWrt_S905X3_5.14.21_67+.img
-          - flippy_name: Secoud
+          - flippy_name: Second
             release_name: OpenWrt_S905X3_5.10.88_68+.img
           - flippy_name: Third
             release_name: OpenWrt_S905X3_5.4.168_68+o.img
