@@ -44,6 +44,9 @@ jobs:
         echo "version=$version"  >> $GITHUB_ENV
         echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")"  >> $GITHUB_ENV
  
+        sudo chmod  -R 777 /opt
+        cp -r ${FLIPPY_NAME}/opt/* /opt
+
     - name: Download
       run: |
         cd /opt/packit
