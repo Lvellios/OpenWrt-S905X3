@@ -71,13 +71,13 @@ jobs:
     - name: Build The Firmware
       run: |
         sudo chmod  -R 777 /opt
-        cd /opt/packit
+        cd /opt/kernel
         sudo chmod +x mk_s905x3_multi.sh
         sudo ./mk_s905x3_multi.sh
         
     - name: Copy The Update Files
       run: |
-        cd /opt/packit
+        cd /opt/kernel
         sudo cp files/update-amlogic-openwrt.sh output/update-amlogic-openwrt.sh
         
     - name: Pigz -9
