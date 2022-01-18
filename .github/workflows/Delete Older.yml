@@ -8,8 +8,8 @@ on:
 
 env:
   DELETE_ARTIFACTS: true
-  KEEP_DAY: 0
-  KEEP_MININUM_RUNS: 0
+  KEEP_DAY: 30
+  KEEP_MININUM_RUNS: 1
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
 
-    - name: Delete older workflow runs and artifacts
+    - name: Delete Workflow Runs
       uses: Mattraks/delete-workflow-runs@main
       if: env.DELETE_ARTIFACTS == 'true'
       with:
