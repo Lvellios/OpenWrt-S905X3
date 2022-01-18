@@ -78,7 +78,7 @@ jobs:
     - name: Copy The Update Files
       run: |
         cd /opt/packit
-        sudo cp files/update-amlogic-openwrt.sh output/update-amlogic-openwrt.sh
+        sudo cp files/openwrt-update-amlogic output/openwrt-update-amlogic
 
     - name: Pigz -9
       id: pigz
