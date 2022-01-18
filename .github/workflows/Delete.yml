@@ -1,0 +1,32 @@
+name: Delete
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 3 * * 3'
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    if: github.event.repository.owner.id == github.event.sender.id
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@main
+
+    - name: Delete Workflow Runs
+      uses: Mattraks/delete-workflow-runs@main
+      with:
+        token: ${{ secrets.RELEASES_TOKEN }}
+        repository: ${{ github.repository }}
+        retain_days: 0
+        keep_minimum_runs: 0
+
+    - name: Remove Old Releases
+      uses: dev-drprasad/delete-older-releases@v0.2.0
+      with:
+        keep_latest: 2
+        delete_tags: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.RELEASES_TOKEN }}
