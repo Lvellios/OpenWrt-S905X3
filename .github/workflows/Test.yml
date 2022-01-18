@@ -17,29 +17,20 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
-    if: github.event.repository.owner.id == github.event.sender.id
-
+    runs-on: ubuntu-18.04
     steps:
-    - name: Checkout
-      uses: actions/checkout@main
-
-    - name: Push Tag
-      id: tag
-      run: |
-        echo "::set-output name=release_tag::$(date +"%m%d%Y%H")"
-
-    - name: Create release
-      id: release
-      uses: ncipollo/release-action@v1
+    - name: Delete Workflow Runs
+      uses: Mattraks/delete-workflow-runs@v2
       with:
-        name: ${{ env.FILE_NAME }}
-        allowUpdates: true
-        tag: ${{ steps.tag.outputs.release_tag }}
-        commit: main
-        token: ${{ secrets.RELEASES_TOKEN }}
-        body: |
-          Default IP: 192.168.0.254
-          Default PW:  password
-          ${{ env.useVersionInfo }}
-        artifacts: ${{ env.FIRMWARE }}/*
+        token: ${{ github.token }}
+        repository: ${{ github.repository }}
+        retain_days: 30
+        keep_minimum_runs: 1
+
+    - name: Remove Old Releases
+      uses: dev-drprasad/delete-older-releases@v0.2.0
+      with:
+        keep_latest: 2
+        delete_tags: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.RELEASES_TOKEN }}
