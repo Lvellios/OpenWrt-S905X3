@@ -6,6 +6,11 @@ on:
   schedule:
     - cron: '30 3 * * 3'
 
+env:
+  DELETE_ARTIFACTS: true
+  KEEP_DAY: 0
+  KEEP_MININUM_RUNS: 0
+
 jobs:
   build:
     runs-on: ubuntu-18.04
@@ -16,13 +21,13 @@ jobs:
       uses: actions/checkout@main
 
     - name: Delete Workflow Runs
-      uses: Mattraks/delete-workflow-runs@v2
+      uses: Mattraks/delete-workflow-runs@main
+      if: env.DELETE_ARTIFACTS == 'true'
       with:
         token: ${{ secrets.RELEASES_TOKEN }}
         repository: ${{ github.repository }}
-        DELETE_ARTIFACTS: true
-        retain_days: 0
-        keep_minimum_runs: 0
+        retain_days: ${{ env.KEEP_DAY }}
+        keep_minimum_runs: ${{ env.KEEP_MININUM_RUNS }}
 
     - name: Remove Releases
       uses: dev-drprasad/delete-older-releases@v0.2.0
