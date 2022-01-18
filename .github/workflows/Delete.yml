@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-18.04
+    if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
     - name: Checkout
@@ -19,6 +20,7 @@ jobs:
       with:
         token: ${{ secrets.RELEASES_TOKEN }}
         repository: ${{ github.repository }}
+        DELETE_ARTIFACTS: true
         retain_days: 0
         keep_minimum_runs: 0
 
