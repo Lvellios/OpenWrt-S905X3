@@ -114,4 +114,4 @@ jobs:
         token: ${{ secrets.RELEASES_TOKEN }}
         body: |
           The Firmware of OpenWrt For Amlogic S905X3
-        artifacts: "/opt/openwrt_packit/output/*"
+        artifacts: "/opt/packit/output/*"
