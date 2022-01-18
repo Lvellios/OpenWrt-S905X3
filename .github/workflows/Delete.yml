@@ -1,6 +1,8 @@
 name: Delete
 
 on:
+  repository_dispatch:
+  workflow_dispatch:
   schedule:
     - cron: '30 3 * * 3'
 
