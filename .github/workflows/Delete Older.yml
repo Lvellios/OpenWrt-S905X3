@@ -9,14 +9,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-18.04
+    if: github.event.repository.owner.id == github.event.sender.id
+    
     steps:
+    - name: Checkout
+      uses: actions/checkout@main
+
     - name: Delete Workflow Runs
-      uses: Mattraks/delete-workflow-runs@v2
+      uses: Mattraks/delete-workflow-runs@main
       with:
         token: ${{ secrets.RELEASES_TOKEN }}
         repository: ${{ github.repository }}
         retain_days: 0
-        keep_minimum_runs: 1
+        keep_minimum_runs: 0
 
     - name: Remove Old Releases
       uses: dev-drprasad/delete-older-releases@v0.2.0
