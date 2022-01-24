@@ -8,8 +8,6 @@ on:
 
 env:
   DELETE_ARTIFACTS: true
-  KEEP_DAY: 0
-  KEEP_MININUM_RUNS: 0
 
 jobs:
   build:
@@ -26,5 +24,5 @@ jobs:
       with:
         token: ${{ secrets.RELEASES_TOKEN }}
         repository: ${{ github.repository }}
-        retain_days: ${{ env.KEEP_DAY }}
-        keep_minimum_runs: ${{ env.KEEP_MININUM_RUNS }}
+        retain_days: 0
+        keep_minimum_runs: 0
