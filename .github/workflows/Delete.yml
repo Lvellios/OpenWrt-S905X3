@@ -6,12 +6,9 @@ on:
   schedule:
     - cron: '30 3 * * 3'
 
-env:
-  DELETE_ARTIFACTS: true
-
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
@@ -20,9 +17,8 @@ jobs:
 
     - name: Delete Workflow Runs
       uses: Mattraks/delete-workflow-runs@main
-      if: env.DELETE_ARTIFACTS == 'true'
       with:
-        token: ${{ secrets.RELEASES_TOKEN }}
+        token: ${{ RELEASES_TOKEN }}
         repository: ${{ github.repository }}
         retain_days: 0
         keep_minimum_runs: 0
