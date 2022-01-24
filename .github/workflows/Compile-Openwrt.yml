@@ -24,7 +24,7 @@ jobs:
       matrix:
         include:
           - flippy_name: First
-            release_name: OpenWrt_S905X3_5.15.15_69+.img
+            release_name: OpenWrt_S905X3_5.16.2_69+.img
           - flippy_name: Second
             release_name: OpenWrt_S905X3_5.10.92_69+.img
           - flippy_name: Third
