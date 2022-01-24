@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: Delete Workflow Runs
-      uses: Mattraks/delete-workflow-runs@main
+      uses: Mattraks/delete-workflow-runs@v2
       with:
         token: ${{ secrets.RELEASES_TOKEN }}
         repository: ${{ github.repository }}
