@@ -115,3 +115,11 @@ jobs:
         body: |
           The Firmware of OpenWrt For Amlogic S905X3
         artifacts: "/opt/packit/output/*"
+
+    - name: Remove Releases
+      uses: dev-drprasad/delete-older-releases@v0.2.0
+      with:
+        keep_latest: 2
+        delete_tags: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.RELEASES_TOKEN }}
