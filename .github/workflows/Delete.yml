@@ -1,4 +1,4 @@
-name: Delete Workflow Runs
+name: Delete Workflow
 on:
   workflow_dispatch:
     inputs:
