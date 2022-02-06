@@ -1,17 +1,14 @@
 name: Delete
 
+name: Delete old workflow runs
 on:
-  repository_dispatch:
-  workflow_dispatch:
-    inputs:
-      ssh:
-        description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
+  schedule:
+    - cron: '0 0 1 * *'
 
 jobs:
-  build:
+  del_runs:
     runs-on: ubuntu-20.04
+    steps:
     - name: Delete Workflow Runs
       uses: Mattraks/delete-workflow-runs@v2
       with:
