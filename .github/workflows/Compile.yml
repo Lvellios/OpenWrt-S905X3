@@ -30,7 +30,7 @@ jobs:
           - flippy_name: Third
             release_name: OpenWrt_S905X3_5.10.98_69+.img
           - flippy_name: Fourth
-            release_name: OpenWrt_S905X3_5.4.172_69+o.img
+            release_name: OpenWrt_S905X3_5.4.177_69+o.img
 
 
     env:
