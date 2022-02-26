@@ -30,7 +30,7 @@ check_file ${OPWRT_ROOTFS_GZ}
 echo "Use $OPWRT_ROOTFS_GZ as openwrt rootfs!"
 
 # 目标镜像文件
-TGT_IMG="${WORK_DIR}/OpenWrt_S905X3_5.15.21_69+.img"
+TGT_IMG="${WORK_DIR}/OpenWrt_S905X3_5.15.25_70+.img"
 
 # 补丁和脚本
 ###########################################################################
@@ -120,6 +120,9 @@ MODEL_DB="${PWD}/files/amlogic_model_database.txt"
 P7ZIP="${PWD}/files/7z"
 # 20211217 add
 DDBR="${PWD}/files/openwrt-ddbr"
+# 20220225 add
+SSH_CIPHERS="aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr,chacha20-poly1305@openssh.com"
+SSHD_CIPHERS="aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr"
 ###########################################################################
 
 check_depends
