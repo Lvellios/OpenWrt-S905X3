@@ -32,7 +32,6 @@ jobs:
           - flippy_name: Fourth
             release_name: OpenWrt_S905X3_5.4.181_70+o.img
 
-
     env:
       FLIPPY_NAME: ${{ matrix.flippy_name }}
       RELEASE_NAME: ${{ matrix.release_name }}
