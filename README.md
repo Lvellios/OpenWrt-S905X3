@@ -1,7 +1,16 @@
-## Description
+# Description
 - The OpenWrt Firmwares for Amlogic S905x3
 - Default IP: 192.168.0.254
 - Default PW: password
+
+## Install to EMMC
+```
+./install-to-emmc.sh
+```
+
+```
+cd /root && ./install-to-emmc.sh
+```
 
 ## Thanks for
 - [GitHub Actions](https://github.com/features/actions)
