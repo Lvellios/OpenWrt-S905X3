@@ -12,7 +12,7 @@ OR
 cd /root && ./install-to-emmc.sh
 ```
 
-## Thanks for
+## Thanks For
 - [GitHub Actions](https://github.com/features/actions)
 - [Microsoft Azure](https://azure.microsoft.com)
 - [OpenWrt Project](https://github.com/openwrt/openwrt)
@@ -23,4 +23,3 @@ cd /root && ./install-to-emmc.sh
 - [Flippy](https://github.com/unifreq/openwrt_packit)
 - [P3TERX](https://github.com/P3TERX/Actions-OpenWrt)
 - [Netflixxp](https://github.com/Netflixxp)
-- [Hibuddies](https://github.com/hibuddies/openwrt/)
