@@ -1,5 +1,4 @@
-# Description
-- The OpenWrt Firmwares for Amlogic S905x3
+# The OpenWrt Firmwares for Amlogic S905x3
 - Default IP: 192.168.0.254
 - Default PW: password
 
