@@ -7,7 +7,7 @@
 ```
 ./install-to-emmc.sh
 ```
-
+OR
 ```
 cd /root && ./install-to-emmc.sh
 ```
