@@ -29,8 +29,6 @@ jobs:
             release_name: OpenWrt_S905X3_5.15.34_71+o.img
           - flippy_name: Kernel_5.10
             release_name: OpenWrt_S905X3_5.10.111_71+.img
-          - flippy_name: Kernel_5.4
-            release_name: OpenWrt_S905X3_5.4.188_71+o.img
 
     env:
       FLIPPY_NAME: ${{ matrix.flippy_name }}
