@@ -5,7 +5,7 @@ source make.env
 source public_funcs
 init_work_env
 
-# 盒子型号识别参数 
+# 盒子型号识别参数
 PLATFORM=amlogic
 SOC=s905x3
 BOARD=multi
@@ -31,7 +31,7 @@ check_file ${OPWRT_ROOTFS_GZ}
 echo "Use $OPWRT_ROOTFS_GZ as openwrt rootfs!"
 
 # 目标镜像文件
-TGT_IMG="${WORK_DIR}/openwrt_${SOC}_${BOARD}_${OPENWRT_VER}_k${KERNEL_VERSION}${SUBVER}.img"
+TGT_IMG="${WORK_DIR}/OpenWrt_S905X3_5.10.111_71+.img"
 
 # 补丁和脚本
 ###########################################################################
@@ -213,7 +213,7 @@ echo
 
 echo "修改根文件系统相关配置 ... "
 cd $TGT_ROOT
-copy_supplement_files 
+copy_supplement_files
 extract_glibc_programs
 adjust_docker_config
 adjust_openssl_config
