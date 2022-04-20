@@ -4,9 +4,8 @@ echo "========================= begin $0 ==========================="
 source make.env
 source public_funcs
 init_work_env
-check_k510
 
-# 盒子型号识别参数
+# 盒子型号识别参数 
 PLATFORM=amlogic
 SOC=s905x3
 BOARD=multi
@@ -21,6 +20,8 @@ BOOT_TGZ=${KERNEL_PKG_HOME}/boot-${KERNEL_VERSION}.tar.gz
 check_file ${BOOT_TGZ}
 DTBS_TGZ=${KERNEL_PKG_HOME}/dtb-amlogic-${KERNEL_VERSION}.tar.gz
 check_file ${DTBS_TGZ}
+K510=$(get_k510_from_boot_tgz "${BOOT_TGZ}" "vmlinuz-${KERNEL_VERSION}")
+export K510
 ###########################################################################
 
 # Openwrt root 源文件
@@ -30,7 +31,7 @@ check_file ${OPWRT_ROOTFS_GZ}
 echo "Use $OPWRT_ROOTFS_GZ as openwrt rootfs!"
 
 # 目标镜像文件
-TGT_IMG="${WORK_DIR}/OpenWrt_S905X3_5.10.111_71+.img"
+TGT_IMG="${WORK_DIR}/openwrt_${SOC}_${BOARD}_${OPENWRT_VER}_k${KERNEL_VERSION}${SUBVER}.img"
 
 # 补丁和脚本
 ###########################################################################
@@ -212,7 +213,7 @@ echo
 
 echo "修改根文件系统相关配置 ... "
 cd $TGT_ROOT
-copy_supplement_files
+copy_supplement_files 
 extract_glibc_programs
 adjust_docker_config
 adjust_openssl_config
