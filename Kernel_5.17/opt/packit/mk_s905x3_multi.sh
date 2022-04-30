@@ -31,7 +31,7 @@ check_file ${OPWRT_ROOTFS_GZ}
 echo "Use $OPWRT_ROOTFS_GZ as openwrt rootfs!"
 
 # 目标镜像文件
-TGT_IMG="${WORK_DIR}/OpenWrt_S905X3_5.17.3_71+.img"
+TGT_IMG="${WORK_DIR}/OpenWrt_S905X3_5.17.3.img"
 
 # 补丁和脚本
 ###########################################################################
