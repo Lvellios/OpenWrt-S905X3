@@ -31,7 +31,7 @@ check_file ${OPWRT_ROOTFS_GZ}
 echo "Use $OPWRT_ROOTFS_GZ as openwrt rootfs!"
 
 # 目标镜像文件
-TGT_IMG="${WORK_DIR}/OpenWrt_S905X3_5.15.34.img"
+TGT_IMG="${WORK_DIR}/OpenWrt_S905X3_5.15.36_72+o.img"
 
 # 补丁和脚本
 ###########################################################################
@@ -159,6 +159,9 @@ FDT=/dtb/amlogic/meson-sm1-x96-max-plus-100m.dtb
 
 # 用于 X96 Max+ (S905X3 网卡工作于 1000M) (超频至2208Mhz)
 #FDT=/dtb/amlogic/meson-sm1-x96-max-plus-oc.dtb
+
+# 用于 X96 Max+ with IP1001M (S905X3 网卡工作于 1000M) (超频至2208Mhz)
+#FDT=/dtb/amlogic/meson-sm1-x96-max-plus-ip1001m.dtb
 
 # 用于 HK1 BoX (S905X3 网卡工作于 1000M)
 #FDT=/dtb/amlogic/meson-sm1-hk1box-vontar-x3.dtb

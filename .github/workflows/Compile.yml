@@ -24,11 +24,9 @@ jobs:
       matrix:
         include:
           - flippy_name: Kernel_5.17
-            release_name: OpenWrt_S905X3_5.17.3.img
+            release_name: OpenWrt_S905X3_5.17.5_72+.img
           - flippy_name: Kernel_5.15
-            release_name: OpenWrt_S905X3_5.15.34.img
-          - flippy_name: Kernel_5.10
-            release_name: OpenWrt_S905X3_5.10.111.img
+            release_name: OpenWrt_S905X3_5.15.36_72+o.img
 
     env:
       FLIPPY_NAME: ${{ matrix.flippy_name }}
