@@ -35,8 +35,7 @@ jobs:
       id: download
       run: |
         [ -d openwrt-armvirt ] || mkdir -p openwrt-armvirt
-        curl -s "https://api.github.com/repos/Lvellios/OpenWrt-S905X3/releases" | awk -F\releases/download/ '$0=$2' | grep 'openwrt-armvirt-64-generic-rootfs' | sed 's/\/openwrt-armvirt-64-generic-rootfs.tar.gz"\+//g' > DOWNLOAD_ARMVIRT
-        wget -q -P openwrt-armvirt https://github.com/Lvellios/OpenWrt-S905X3/releases/download/$(cat DOWNLOAD_ARMVIRT)/openwrt-armvirt-64-generic-rootfs.tar.gz
+        wget -q $(curl -s "https://api.github.com/repos/Lvellios/OpenWrt-S905X3/releases" | grep "openwrt-armvirt-64-generic-rootfs.tar.gz" | awk -F '"' '{print $4}' | awk 'NR==2')
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Building OpenWrt Firmware
