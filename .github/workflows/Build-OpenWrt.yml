@@ -36,7 +36,7 @@ jobs:
       run: |
         [ -d openwrt-armvirt ] || mkdir -p openwrt-armvirt
         curl -s "https://api.github.com/repos/Lvellios/OpenWrt-S905X3/releases" | grep "openwrt-armvirt-64-generic-rootfs.tar.gz" | awk -F '"' '{print $4}' | awk 'NR==2' > ROOTFS
-        wget -q $(cat ROOTFS) -P openwrt-armvirt
+        wget --report-speed=bits -i ./ROOTFS -P openwrt-armvirt
 
     - name: Building OpenWrt Firmware
       uses: unifreq/openwrt_packit@master
