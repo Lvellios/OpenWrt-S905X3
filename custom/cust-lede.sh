@@ -53,7 +53,7 @@ svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 p
 svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/new-package/luci-app-amlogic
 
 ## Pack Dependency
-git clone --depth 1 -b main https://github.com/xiaorouji/openwrt-passwall-packages package/new-package/luci-app-passwall-depends
+# git clone --depth 1 -b main https://github.com/xiaorouji/openwrt-passwall-packages package/new-package/luci-app-passwall-depends
 
 # Bandwidth Monitor
 svn co https://github.com/brvphoenix/luci-app-wrtbwmon/trunk/luci-app-wrtbwmon package/new-package/luci-app-wrtbwmon
