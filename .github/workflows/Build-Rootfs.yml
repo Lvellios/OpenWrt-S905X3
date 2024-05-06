@@ -10,7 +10,7 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/lede.config
-  DIY_SCRIPT: custom/cust-lede.sh
+  DIY_SCRIPT: custom/lede.sh
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Canada/Atlantic
