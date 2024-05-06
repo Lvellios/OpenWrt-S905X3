@@ -6,10 +6,15 @@ on:
     - cron: 3 2 6 * *
 
 env:
-  UPLOAD_COWTRANSFER: false
-  RELEASE: true
+  REPO_BRANCH: master
+  FEEDS_CONF: feeds.conf.default
+  CONFIG_FILE: config/openwrt.config
+  DIY_SCRIPT: custom/openwrt.sh
+  UPLOAD_FIRMWARE: true
+  UPLOAD_RELEASE: true
   TZ: Canada/Atlantic
-  FILE_NAME: Amlogic S905X3 OpenWrt
+  FILE_NAME: OpenWrt RootFS AArch64
+
 
 jobs:
   Toolchain:
