@@ -24,12 +24,8 @@ git clone --depth 1 -b main https://github.com/xiaorouji/openwrt-passwall-packag
 git clone --depth 1 https://github.com/pymumu/openwrt-smartdns package/AddPack/smartdns
 git clone --depth 1 -b master https://github.com/pymumu/luci-app-smartdns package/AddPack/luci-app-smartdns
 
-# git clone --depth 1 -b lede https://github.com/pymumu/luci-app-smartdns package/AddPack/luci-app-smartdns
-
 # Netdata
 git clone --depth 1 https://github.com/sirpdboy/luci-app-netdata package/AddPack/luci-app-netdata
-# git clone --depth 1 https://github.com/Jason6111/luci-app-netdata package/AddPack/luci-app-netdata
-# git clone --depth 1 https://github.com/sirpdboy/luci-app-netdata package/AddPack/luci-app-netdata
 
 # AdGuardHome
 git clone --depth 1 https://github.com/xiaoxiao29/luci-app-adguardhome package/AddPack/luci-app-adguardhome
@@ -38,16 +34,16 @@ git clone --depth 1 https://github.com/xiaoxiao29/luci-app-adguardhome package/A
 git clone --depth 1 https://github.com/jerrykuku/lua-maxminddb package/AddPack/lua-maxminddb
 
 # Bandwidth Monitor
-git clone --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon package/AddPack/luci-app-wrtbwmon
 git clone --depth 1 https://github.com/brvphoenix/wrtbwmon package/AddPack/wrtbwmon
+git clone --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon package/AddPack/luci-app-wrtbwmon
 
 # Alist
-git clone --depth 1 https://github.com/sbwml/luci-app-alist package/AddPack/luci-app-alist
 git clone --depth 1 https://github.com/alist-org/alist package/AddPack/alist
+git clone --depth 1 https://github.com/sbwml/luci-app-alist package/AddPack/luci-app-alist
 
 # MosDNS
-git clone --depth 1 https://github.com/QiuSimons/openwrt-mos package/AddPack/luci-app-mosdns
-# git clone --depth 1 https://github.com/sbwml/luci-app-mosdns package/AddPack/luci-app-mosdns
+git clone --depth 1 https://github.com/QiuSimons/openwrt-mos package/AddPack/mosdns
+git clone --depth 1 https://github.com/sbwml/luci-app-mosdns package/AddPack/luci-app-mosdns
 
 ## UnTested
 # git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-status package/AddPack/luci-app-cpu-status
@@ -55,7 +51,6 @@ git clone --depth 1 https://github.com/QiuSimons/openwrt-mos package/AddPack/luc
 # git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-perf package/AddPack/luci-app-cpu-perf
 # git clone --depth 1 https://github.com/gSpotx2f/luci-app-interfaces-statistics package/AddPack/luci-app-interfaces-statistics
 # git clone --depth 1 https://github.com/DevOpenWRT-Router/luci-app-cpulimit package/AddPack/luci-app-cpulimit
-
 
 # Customizing the LUCI Menus
 ## PassWall Menu
