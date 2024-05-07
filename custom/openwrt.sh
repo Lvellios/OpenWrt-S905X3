@@ -64,7 +64,7 @@ git clone --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon package/AddP
 git clone --depth 1 https://github.com/haiibo/packages package/AddPack/wrtbwmon
 
 # Alist
-git clone --depth 1 https://github.com/sbwml/luci-app-alist package/AddPack/luci-app-alist
+# git clone --depth 1 https://github.com/sbwml/luci-app-alist package/AddPack/luci-app-alist
 
 # DDNS.to
 git clone --depth 1 https://github.com/haiibo/packages package/AddPack/luci-app-ddnsto
