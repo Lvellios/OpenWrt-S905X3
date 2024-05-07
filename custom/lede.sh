@@ -22,6 +22,9 @@ rm -rf /feeds/luci/applications/luci-app-wrtbwmon
 rm -rf /feeds/luci/applications/luci-app-mosdns
 rm -rf /feeds/luci/applications/luci-app-serverchan
 
+# Golang
+git clone -b 22.x https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
+
 # Themes
 git clone --depth 1 -b master https://github.com/jerrykuku/luci-theme-argon package/AddPack/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/AddPack/luci-app-argon-config
