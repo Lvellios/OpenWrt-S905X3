@@ -15,25 +15,31 @@ rm -rf /feeds/packages/net/mosdns
 rm -rf /feeds/packages/net/msd_lite
 rm -rf /feeds/packages/net/smartdns
 rm -rf /feeds/packages/lang/golang
+
+# Remove Themes
 rm -rf /feeds/luci/themes/luci-theme-argon
 rm -rf /feeds/luci/themes/luci-theme-netgear
+
+# Remove Applications
+rm -rf /feeds/luci/applications/luci-app-mosdns
 rm -rf /feeds/luci/applications/luci-app-netdata
 rm -rf /feeds/luci/applications/luci-app-wrtbwmon
 # rm -rf /feeds/luci/applications/luci-app-dockerman
-rm -rf /feeds/luci/applications/luci-app-mosdns
 rm -rf /feeds/luci/applications/luci-app-serverchan
 
 # Golang
 git clone -b 22.x https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 
 # Themes
-git clone --depth 1 -b master https://github.com/jerrykuku/luci-theme-argon package/AddPack/luci-theme-argon
+# git clone --depth 1 -b master https://github.com/jerrykuku/luci-theme-argon package/AddPack/luci-theme-argon
+git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/AddPack/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/AddPack/luci-app-argon-config
 
 # Pack
 git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus package/AddPack/luci-app-eqos
 git clone --depth 1 https://github.com/chenmozhijin/luci-app-socat package/AddPack/luci-app-socat
 git clone --depth 1 https://github.com/ximiTech/luci-app-msd_lite package/AddPack/luci-app-msd_lite
+git clone --depth 1 https://github.com/QiuSimons/luci-app-daed package/AddPack/luci-app-daed
 
 # HelloWorld
 git clone --depth 1 https://github.com/MilesPoupart/luci-app-vssr package/AddPack/luci-app-vssr
