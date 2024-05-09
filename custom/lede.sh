@@ -1,7 +1,8 @@
 #!/bin/bash
 #
-# Modify Default
+# Modify Default Config
 sed -i 's/192.168.1.1/192.168.0.254/g' package/base-files/files/bin/config_generate
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # For Lede
 sed -i 's/ntp.aliyun.com/pool.ntp.org/g' package/base-files/files/bin/config_generate
@@ -10,22 +11,26 @@ sed -i 's/time.ustc.edu.cn/1.pool.ntp.org/g' package/base-files/files/bin/config
 sed -i 's/cn.pool.ntp.org/2.pool.ntp.org/g' package/base-files/files/bin/config_generate
 sed -i 's/ntp.aliyun.com/pool.ntp.org/g' package/base-files/files/bin/config_generate
 
+# Update Feeds
+./scripts/feeds update -a
+
 # Remove Packages
-rm -rf /feeds/packages/net/mosdns
-rm -rf /feeds/packages/net/msd_lite
-rm -rf /feeds/packages/net/smartdns
-rm -rf /feeds/packages/lang/golang
+rm -rf feeds/packages/net/mosdns
+rm -rf feeds/packages/net/msd_lite
+rm -rf feeds/packages/net/smartdns
+rm -rf feeds/packages/lang/golang
 
 # Remove Themes
-rm -rf /feeds/luci/themes/luci-theme-argon
-rm -rf /feeds/luci/themes/luci-theme-netgear
+rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/applications/luci-app-argon-config
+rm -rf feeds/luci/themes/luci-theme-netgear
 
 # Remove Applications
-rm -rf /feeds/luci/applications/luci-app-mosdns
-rm -rf /feeds/luci/applications/luci-app-netdata
-rm -rf /feeds/luci/applications/luci-app-wrtbwmon
-# rm -rf /feeds/luci/applications/luci-app-dockerman
-rm -rf /feeds/luci/applications/luci-app-serverchan
+rm -rf feeds/luci/applications/luci-app-mosdns
+rm -rf feeds/luci/applications/luci-app-netdata
+rm -rf feeds/luci/applications/luci-app-wrtbwmon
+# rm -rf feeds/luci/applications/luci-app-dockerman
+rm -rf feeds/luci/applications/luci-app-serverchan
 
 # Golang
 git clone -b 22.x https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
@@ -38,8 +43,19 @@ git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/A
 # Pack
 git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus package/AddPack/luci-app-eqos
 git clone --depth 1 https://github.com/chenmozhijin/luci-app-socat package/AddPack/luci-app-socat
-git clone --depth 1 https://github.com/ximiTech/luci-app-msd_lite package/AddPack/luci-app-msd_lite
-git clone --depth 1 https://github.com/QiuSimons/luci-app-daed package/AddPack/luci-app-daed
+git clone --depth 1 https://github.com/gyssi007/luci-app-msd_lite package/AddPack/luci-app-msd_lite
+# git clone --depth 1 https://github.com/QiuSimons/luci-app-daed package/AddPack/luci-app-daed
+
+# Others
+# mkdir -vp /WorkDir/OpenWrt/lede/package/AddPack/{daed/,libcron}
+# git clone -n --depth=1 --filter=tree:0 https://github.com/immortalwrt/packages package/AddPack/daed
+# git -C package/AddPack/daed/ sparse-checkout set --no-cone net/daed
+# git -C package/AddPack/daed/ checkout
+
+# git clone -n --depth=1 --filter=tree:0 https://github.com/immortalwrt/packages package/AddPack/libcron
+# git -C package/AddPack/libcron/ sparse-checkout set --no-cone libs/libcron
+# git -C package/AddPack/libcron/ checkout
+
 
 # HelloWorld
 git clone --depth 1 https://github.com/MilesPoupart/luci-app-vssr package/AddPack/luci-app-vssr
@@ -124,5 +140,4 @@ find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/include\ \.\
 find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_URL:=\@GHREPO/PKG_SOURCE_URL:=https:\/\/github\.com/g' {}
 find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_URL:=\@GHCODELOAD/PKG_SOURCE_URL:=https:\/\/codeload\hub\.com/g' {}
 
-./scripts/feeds update -a
 ./scripts/feeds install -a
