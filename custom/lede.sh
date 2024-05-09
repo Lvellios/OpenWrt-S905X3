@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Modify Default Config
+# Tweaks Default Config
 sed -i 's/192.168.1.1/192.168.0.254/g' package/base-files/files/bin/config_generate
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
@@ -10,9 +10,6 @@ sed -i 's/time1.cloud.tencent.com/0.pool.ntp.org/g' package/base-files/files/bin
 sed -i 's/time.ustc.edu.cn/1.pool.ntp.org/g' package/base-files/files/bin/config_generate
 sed -i 's/cn.pool.ntp.org/2.pool.ntp.org/g' package/base-files/files/bin/config_generate
 sed -i 's/ntp.aliyun.com/pool.ntp.org/g' package/base-files/files/bin/config_generate
-
-# Update Feeds
-./scripts/feeds update -a
 
 # Remove Packages
 rm -rf feeds/packages/net/mosdns
@@ -140,4 +137,6 @@ find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/include\ \.\
 find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_URL:=\@GHREPO/PKG_SOURCE_URL:=https:\/\/github\.com/g' {}
 find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_URL:=\@GHCODELOAD/PKG_SOURCE_URL:=https:\/\/codeload\hub\.com/g' {}
 
+# Update & Install Feeds
+./scripts/feeds update -a
 ./scripts/feeds install -a
