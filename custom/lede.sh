@@ -34,24 +34,25 @@ git clone -b 22.x https://github.com/sbwml/packages_lang_golang feeds/packages/l
 
 # Themes
 # git clone --depth 1 -b master https://github.com/jerrykuku/luci-theme-argon package/AddPack/luci-theme-argon
+# git clone --depth 1 -b master https://github.com/jerrykuku/luci-app-argon-config package/AddPack/luci-app-argon-config
 git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/AddPack/luci-theme-argon
-git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/AddPack/luci-app-argon-config
+git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config package/AddPack/luci-app-argon-config
 
 # Pack
 git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus package/AddPack/luci-app-eqos
 git clone --depth 1 https://github.com/chenmozhijin/luci-app-socat package/AddPack/luci-app-socat
 git clone --depth 1 https://github.com/gyssi007/luci-app-msd_lite package/AddPack/luci-app-msd_lite
-# git clone --depth 1 https://github.com/QiuSimons/luci-app-daed package/AddPack/luci-app-daed
+git clone --depth 1 https://github.com/QiuSimons/luci-app-daed package/AddPack/luci-app-daed
 
 # Others
-# mkdir -vp /WorkDir/OpenWrt/lede/package/AddPack/{daed/,libcron}
-# git clone -n --depth=1 --filter=tree:0 https://github.com/immortalwrt/packages package/AddPack/daed
-# git -C package/AddPack/daed/ sparse-checkout set --no-cone net/daed
-# git -C package/AddPack/daed/ checkout
+mkdir -vp /WorkDir/OpenWrt/lede/package/AddPack/{daed/,libcron}
+git clone -n --depth=1 --filter=tree:0 https://github.com/immortalwrt/packages package/AddPack/daed
+git -C package/AddPack/daed/ sparse-checkout set --no-cone net/daed
+git -C package/AddPack/daed/ checkout
 
-# git clone -n --depth=1 --filter=tree:0 https://github.com/immortalwrt/packages package/AddPack/libcron
-# git -C package/AddPack/libcron/ sparse-checkout set --no-cone libs/libcron
-# git -C package/AddPack/libcron/ checkout
+git clone -n --depth=1 --filter=tree:0 https://github.com/immortalwrt/packages package/AddPack/libcron
+git -C package/AddPack/libcron/ sparse-checkout set --no-cone libs/libcron
+git -C package/AddPack/libcron/ checkout
 
 
 # HelloWorld
@@ -137,6 +138,5 @@ find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/include\ \.\
 find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_URL:=\@GHREPO/PKG_SOURCE_URL:=https:\/\/github\.com/g' {}
 find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_URL:=\@GHCODELOAD/PKG_SOURCE_URL:=https:\/\/codeload\hub\.com/g' {}
 
-# Update & Install Feeds
-./scripts/feeds update -a
+# Install Feeds
 ./scripts/feeds install -a
