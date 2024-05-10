@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Tweaks Default Config
+# Modify Default Config
 sed -i 's/192.168.1.1/192.168.0.254/g' package/base-files/files/bin/config_generate
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
@@ -33,8 +33,6 @@ rm -rf feeds/luci/applications/luci-app-serverchan
 git clone -b 22.x https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 
 # Themes
-# git clone --depth 1 -b master https://github.com/jerrykuku/luci-theme-argon package/AddPack/luci-theme-argon
-# git clone --depth 1 -b master https://github.com/jerrykuku/luci-app-argon-config package/AddPack/luci-app-argon-config
 git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/AddPack/luci-theme-argon
 git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config package/AddPack/luci-app-argon-config
 
@@ -45,7 +43,7 @@ git clone --depth 1 https://github.com/gyssi007/luci-app-msd_lite package/AddPac
 git clone --depth 1 https://github.com/QiuSimons/luci-app-daed package/AddPack/luci-app-daed
 
 # Others
-mkdir -vp /WorkDir/OpenWrt/lede/package/AddPack/{daed/,libcron}
+sudo mkdir -vp /WorkDir/OpenWrt/lede/package/AddPack/{daed/,libcron}
 git clone -n --depth=1 --filter=tree:0 https://github.com/immortalwrt/packages package/AddPack/daed
 git -C package/AddPack/daed/ sparse-checkout set --no-cone net/daed
 git -C package/AddPack/daed/ checkout
@@ -71,7 +69,8 @@ git clone --depth 1 -b master https://github.com/pymumu/luci-app-smartdns packag
 git clone --depth 1 https://github.com/sirpdboy/luci-app-netdata package/AddPack/luci-app-netdata
 
 # AdGuardHome
-git clone --depth 1 https://github.com/xiaoxiao29/luci-app-adguardhome package/AddPack/luci-app-adguardhome
+# git clone --depth 1 https://github.com/xiaoxiao29/luci-app-adguardhome package/AddPack/luci-app-adguardhome
+git clone --depth 1 https://github.com/kongfl888/luci-app-adguardhome package/new-package/luci-app-adguardhome
 
 # Maxmind DB
 git clone --depth 1 https://github.com/jerrykuku/lua-maxminddb package/AddPack/lua-maxminddb
