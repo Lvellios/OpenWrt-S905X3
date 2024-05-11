@@ -42,7 +42,6 @@ git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config 
 # Themes
 git clone --depth 1 https://github.com/kenzok8/luci-theme-ifit package/AddPack/luci-theme-ifit
 
-
 # Pack
 git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus package/AddPack/luci-app-eqos
 git clone --depth 1 https://github.com/chenmozhijin/luci-app-socat package/AddPack/luci-app-socat
@@ -58,7 +57,6 @@ git -C package/AddPack/daed/ checkout
 git clone -n --depth=1 --filter=tree:0 https://github.com/immortalwrt/packages package/AddPack/libcron
 git -C package/AddPack/libcron/ sparse-checkout set --no-cone libs/libcron
 git -C package/AddPack/libcron/ checkout
-
 
 # HelloWorld
 git clone --depth 1 https://github.com/MilesPoupart/luci-app-vssr package/AddPack/luci-app-vssr
@@ -94,12 +92,12 @@ git clone --depth 1 https://github.com/sbwml/luci-app-alist package/AddPack/luci
 git clone --depth 1 https://github.com/QiuSimons/openwrt-mos package/AddPack/mosdns
 git clone --depth 1 https://github.com/sbwml/luci-app-mosdns package/AddPack/luci-app-mosdns
 
-
 # EQoS Plus
 git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus package/AddPack/luci-app-eqosplus
 # git clone --depth 1 https://github.com/JSZMonkey/luci-app-eqosplus package/AddPack/luci-app-eqosplus
 
-
+# DDNS Go
+git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go package/AddPack/luci-app-ddns-go
 
 ## UnTested
 # git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-status package/AddPack/luci-app-cpu-status
