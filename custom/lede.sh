@@ -19,7 +19,6 @@ rm -rf feeds/packages/lang/golang
 
 # Remove Themes
 rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/applications/luci-app-argon-config
 rm -rf feeds/luci/themes/luci-theme-netgear
 
 # Remove Applications
@@ -32,9 +31,17 @@ rm -rf feeds/luci/applications/luci-app-serverchan
 # Golang
 git clone -b 22.x https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 
-# Themes
+# Argon Themes for OpenWrt
+# git clone --depth 1 -b master https://github.com/jerrykuku/luci-theme-argon package/AddPack/luci-theme-argon
+# git clone --depth 1 -b master https://github.com/jerrykuku/luci-app-argon-config package/AddPack/luci-app-argon-config
+
+# Argon Themes for Lede
 git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/AddPack/luci-theme-argon
 git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config package/AddPack/luci-app-argon-config
+
+# Themes
+git clone --depth 1 https://github.com/kenzok8/luci-theme-ifit package/AddPack/luci-theme-ifit
+
 
 # Pack
 git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus package/AddPack/luci-app-eqos
@@ -87,6 +94,13 @@ git clone --depth 1 https://github.com/sbwml/luci-app-alist package/AddPack/luci
 git clone --depth 1 https://github.com/QiuSimons/openwrt-mos package/AddPack/mosdns
 git clone --depth 1 https://github.com/sbwml/luci-app-mosdns package/AddPack/luci-app-mosdns
 
+
+# EQoS Plus
+git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus package/AddPack/luci-app-eqosplus
+# git clone --depth 1 https://github.com/JSZMonkey/luci-app-eqosplus package/AddPack/luci-app-eqosplus
+
+
+
 ## UnTested
 # git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-status package/AddPack/luci-app-cpu-status
 # git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-status-mini package/AddPack/luci-app-cpu-status-mini
@@ -138,4 +152,4 @@ find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_U
 find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_URL:=\@GHCODELOAD/PKG_SOURCE_URL:=https:\/\/codeload\hub\.com/g' {}
 
 # Install Feeds
-./scripts/feeds install -a
+./scripts/feeds install -a -f
