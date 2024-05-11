@@ -108,7 +108,9 @@ git clone --depth 1 https://github.com/sirpdboy/luci-app-partexp package/AddPack
 git clone --depth 1 https://github.com/sirpdboy/luci-app-autotimeset package/AddPack/luci-app-autotimeset
 
 # CloudFlare Test
+git clone --depth 1 https://github.com/immortalwrt-collections/openwrt-cdnspeedtest package/AddPack/openwrt-cdnspeedtest
 git clone --depth 1 https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest package/AddPack/luci-app-cloudflarespeedtest
+sed -i 's/CGO_ENABLED=0/CGO_ENABLED=1/g' package/AddPack/openwrt-cdnspeedtest/cdnspeedtest/Makefile
 
 ## UnTested
 # git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-status package/AddPack/luci-app-cpu-status
