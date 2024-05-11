@@ -77,7 +77,7 @@ git clone --depth 1 -b master https://github.com/pymumu/luci-app-smartdns packag
 git clone --depth 1 https://github.com/sirpdboy/luci-app-netdata package/AddPack/luci-app-netdata
 
 # AdGuardHome
-git clone --depth 1 https://github.com/kongfl888/luci-app-adguardhome package/new-package/luci-app-adguardhome
+git clone --depth 1 https://github.com/kongfl888/luci-app-adguardhome package/AddPack/luci-app-adguardhome
 
 # Maxmind DB
 git clone --depth 1 https://github.com/jerrykuku/lua-maxminddb package/AddPack/lua-maxminddb
