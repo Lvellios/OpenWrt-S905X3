@@ -101,6 +101,15 @@ git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus package/AddPac
 # DDNS Go
 git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go package/AddPack/luci-app-ddns-go
 
+# Partition
+git clone --depth 1 https://github.com/sirpdboy/luci-app-partexp package/AddPack/luci-app-partexp
+
+# Auto Cron
+git clone --depth 1 https://github.com/sirpdboy/luci-app-autotimeset package/AddPack/luci-app-autotimeset
+
+# CloudFlare Test
+git clone --depth 1 https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest package/AddPack/luci-app-cloudflarespeedtest
+
 ## UnTested
 # git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-status package/AddPack/luci-app-cpu-status
 # git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-status-mini package/AddPack/luci-app-cpu-status-mini
