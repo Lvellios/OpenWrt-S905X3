@@ -66,6 +66,9 @@ git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall package/AddPac
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 package/AddPack/luci-app-passwall2
 git clone --depth 1 -b main https://github.com/xiaorouji/openwrt-passwall-packages package/AddPack/openwrt-passwall-packages
 
+# Xray
+git clone --depth 1 https://github.com/yichya/luci-app-xray package/AddPack/luci-app-xray
+
 # SmartDNS
 git clone --depth 1 https://github.com/pymumu/openwrt-smartdns package/AddPack/smartdns
 git clone --depth 1 -b master https://github.com/pymumu/luci-app-smartdns package/AddPack/luci-app-smartdns
