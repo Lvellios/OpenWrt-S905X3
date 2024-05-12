@@ -39,13 +39,12 @@ git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config 
 git clone --depth 1 https://github.com/kenzok8/luci-theme-ifit package/AddPack/luci-theme-ifit
 
 # Pack
-git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus package/AddPack/luci-app-eqos
 git clone --depth 1 https://github.com/chenmozhijin/luci-app-socat package/AddPack/luci-app-socat
 git clone --depth 1 https://github.com/gyssi007/luci-app-msd_lite package/AddPack/luci-app-msd_lite
-git clone --depth 1 https://github.com/QiuSimons/luci-app-daed package/AddPack/luci-app-daed
 
-# Others
+# Daed
 sudo mkdir -vp /WorkDir/OpenWrt/lede/package/AddPack/{daed/,libcron}
+git clone --depth 1 https://github.com/QiuSimons/luci-app-daed package/AddPack/luci-app-daed
 git clone -n --depth=1 --filter=tree:0 https://github.com/immortalwrt/packages package/AddPack/daed
 git -C package/AddPack/daed/ sparse-checkout set --no-cone net/daed
 git -C package/AddPack/daed/ checkout
