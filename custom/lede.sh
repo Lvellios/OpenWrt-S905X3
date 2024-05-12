@@ -31,11 +31,7 @@ rm -rf feeds/luci/applications/luci-app-serverchan
 # Golang
 git clone -b 22.x https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 
-# Argon Themes for OpenWrt
-# git clone --depth 1 -b master https://github.com/jerrykuku/luci-theme-argon package/AddPack/luci-theme-argon
-# git clone --depth 1 -b master https://github.com/jerrykuku/luci-app-argon-config package/AddPack/luci-app-argon-config
-
-# Argon Themes for Lede
+# Themes
 git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/AddPack/luci-theme-argon
 git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config package/AddPack/luci-app-argon-config
 
@@ -78,6 +74,7 @@ git clone --depth 1 https://github.com/sirpdboy/luci-app-netdata package/AddPack
 
 # AdGuardHome
 git clone --depth 1 https://github.com/kongfl888/luci-app-adguardhome package/AddPack/luci-app-adguardhome
+# git clone --depth 1 https://github.com/xiaoxiao29/luci-app-adguardhome package/AddPack/luci-app-adguardhome
 
 # Maxmind DB
 git clone --depth 1 https://github.com/jerrykuku/lua-maxminddb package/AddPack/lua-maxminddb
