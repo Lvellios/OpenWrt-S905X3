@@ -11,7 +11,6 @@ git clone --depth 1 -b master https://github.com/jerrykuku/luci-app-argon-config
 git clone --depth 1 https://github.com/kenzok8/luci-theme-ifit package/AddPack/luci-theme-ifit
 
 # Pack
-git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus package/AddPack/luci-app-eqos
 git clone --depth 1 https://github.com/chenmozhijin/luci-app-socat package/AddPack/luci-app-socat
 git clone --depth 1 https://github.com/ximiTech/luci-app-msd_lite package/AddPack/luci-app-msd_lite
 
