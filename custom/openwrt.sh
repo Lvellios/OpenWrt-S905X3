@@ -12,7 +12,7 @@ git clone --depth 1 https://github.com/kenzok8/luci-theme-ifit package/AddPack/l
 
 # Pack
 git clone --depth 1 https://github.com/chenmozhijin/luci-app-socat package/AddPack/luci-app-socat
-git clone --depth 1 https://github.com/ximiTech/luci-app-msd_lite package/AddPack/luci-app-msd_lite
+git clone --depth 1 https://github.com/chenmozhijin/turboacc package/AddPack/turboacc
 
 # HelloWorld
 git clone --depth 1 https://github.com/MilesPoupart/luci-app-vssr package/AddPack/luci-app-vssr
@@ -32,10 +32,6 @@ git clone --depth 1 -b master https://github.com/pymumu/luci-app-smartdns packag
 # Netdata
 git clone --depth 1 https://github.com/sirpdboy/luci-app-netdata package/AddPack/luci-app-netdata
 
-# AdGuardHome
-git clone --depth 1 https://github.com/kongfl888/luci-app-adguardhome package/AddPack/luci-app-adguardhome
-# git clone --depth 1 https://github.com/xiaoxiao29/luci-app-adguardhome package/AddPack/luci-app-adguardhome
-
 # Maxmind DB
 git clone --depth 1 https://github.com/jerrykuku/lua-maxminddb package/AddPack/lua-maxminddb
 
@@ -43,35 +39,11 @@ git clone --depth 1 https://github.com/jerrykuku/lua-maxminddb package/AddPack/l
 git clone --depth 1 https://github.com/brvphoenix/wrtbwmon package/AddPack/wrtbwmon
 git clone --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon package/AddPack/luci-app-wrtbwmon
 
-# Alist
-git clone --depth 1 https://github.com/alist-org/alist package/AddPack/alist
-git clone --depth 1 https://github.com/sbwml/luci-app-alist package/AddPack/luci-app-alist
-
-# MosDNS
-git clone --depth 1 https://github.com/QiuSimons/openwrt-mos package/AddPack/mosdns
-git clone --depth 1 https://github.com/sbwml/luci-app-mosdns package/AddPack/luci-app-mosdns
-
-# MosDNS
-git clone --depth 1 https://github.com/QiuSimons/openwrt-mos package/AddPack/mosdns
-git clone --depth 1 https://github.com/sbwml/luci-app-mosdns package/AddPack/luci-app-mosdns
-
-# EQoS Plus
-git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus package/AddPack/luci-app-eqosplus
-# git clone --depth 1 https://github.com/JSZMonkey/luci-app-eqosplus package/AddPack/luci-app-eqosplus
-
-# DDNS Go
-git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go package/AddPack/luci-app-ddns-go
-
 # Partition
 git clone --depth 1 https://github.com/sirpdboy/luci-app-partexp package/AddPack/luci-app-partexp
 
 # Auto Cron
 git clone --depth 1 https://github.com/sirpdboy/luci-app-autotimeset package/AddPack/luci-app-autotimeset
-
-# CloudFlare Test
-git clone --depth 1 https://github.com/immortalwrt-collections/openwrt-cdnspeedtest package/AddPack/openwrt-cdnspeedtest
-git clone --depth 1 https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest package/AddPack/luci-app-cloudflarespeedtest
-sed -i 's/CGO_ENABLED=0/CGO_ENABLED=1/g' package/AddPack/openwrt-cdnspeedtest/cdnspeedtest/Makefile
 
 ## UnTested
 # git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-status package/AddPack/luci-app-cpu-status
