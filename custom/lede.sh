@@ -40,7 +40,7 @@ git clone --depth 1 https://github.com/kenzok8/luci-theme-ifit package/AddPack/l
 
 # Pack
 git clone --depth 1 https://github.com/chenmozhijin/luci-app-socat package/AddPack/luci-app-socat
-git clone --depth 1 https://github.com/gyssi007/luci-app-msd_lite package/AddPack/luci-app-msd_lite
+# git clone --depth 1 https://github.com/gyssi007/luci-app-msd_lite package/AddPack/luci-app-msd_lite
 
 # Daed
 sudo mkdir -vp /WorkDir/OpenWrt/lede/package/AddPack/{daed/,libcron}
@@ -65,8 +65,8 @@ git clone --depth 1 -b main https://github.com/xiaorouji/openwrt-passwall-packag
 git clone --depth 1 https://github.com/yichya/luci-app-xray package/AddPack/luci-app-xray
 
 # SmartDNS
-git clone --depth 1 https://github.com/pymumu/openwrt-smartdns package/AddPack/smartdns
-git clone --depth 1 -b master https://github.com/pymumu/luci-app-smartdns package/AddPack/luci-app-smartdns
+# git clone --depth 1 https://github.com/pymumu/openwrt-smartdns package/AddPack/smartdns
+# git clone --depth 1 -b master https://github.com/pymumu/luci-app-smartdns package/AddPack/luci-app-smartdns
 
 # Netdata
 git clone --depth 1 https://github.com/sirpdboy/luci-app-netdata package/AddPack/luci-app-netdata
@@ -85,10 +85,6 @@ git clone --depth 1 https://github.com/sbwml/luci-app-alist package/AddPack/luci
 # MosDNS
 git clone --depth 1 https://github.com/QiuSimons/openwrt-mos package/AddPack/mosdns
 git clone --depth 1 https://github.com/sbwml/luci-app-mosdns package/AddPack/luci-app-mosdns
-
-# EQoS Plus
-git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus package/AddPack/luci-app-eqosplus
-# git clone --depth 1 https://github.com/JSZMonkey/luci-app-eqosplus package/AddPack/luci-app-eqosplus
 
 # DDNS Go
 git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go package/AddPack/luci-app-ddns-go
