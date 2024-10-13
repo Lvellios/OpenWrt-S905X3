@@ -12,8 +12,6 @@ sed -i 's/cn.pool.ntp.org/2.pool.ntp.org/g' package/base-files/files/bin/config_
 sed -i 's/ntp.aliyun.com/pool.ntp.org/g' package/base-files/files/bin/config_generate
 
 # Remove Packages
-rm -rf feeds/packages/net/mosdns
-rm -rf feeds/packages/net/msd_lite
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/packages/lang/golang
 
@@ -22,7 +20,6 @@ rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/themes/luci-theme-netgear
 
 # Remove Applications
-rm -rf feeds/luci/applications/luci-app-mosdns
 rm -rf feeds/luci/applications/luci-app-netdata
 rm -rf feeds/luci/applications/luci-app-wrtbwmon
 # rm -rf feeds/luci/applications/luci-app-dockerman
@@ -40,7 +37,6 @@ git clone --depth 1 https://github.com/kenzok8/luci-theme-ifit package/AddPack/l
 
 # Pack
 git clone --depth 1 https://github.com/chenmozhijin/luci-app-socat package/AddPack/luci-app-socat
-# git clone --depth 1 https://github.com/gyssi007/luci-app-msd_lite package/AddPack/luci-app-msd_lite
 
 # Daed
 sudo mkdir -vp /WorkDir/OpenWrt/lede/package/AddPack/{daed/,libcron}
@@ -65,8 +61,8 @@ git clone --depth 1 -b main https://github.com/xiaorouji/openwrt-passwall-packag
 git clone --depth 1 https://github.com/yichya/luci-app-xray package/AddPack/luci-app-xray
 
 # SmartDNS
-# git clone --depth 1 https://github.com/pymumu/openwrt-smartdns package/AddPack/smartdns
-# git clone --depth 1 -b master https://github.com/pymumu/luci-app-smartdns package/AddPack/luci-app-smartdns
+git clone --depth 1 https://github.com/pymumu/openwrt-smartdns package/AddPack/smartdns
+git clone --depth 1 -b master https://github.com/pymumu/luci-app-smartdns package/AddPack/luci-app-smartdns
 
 # Netdata
 git clone --depth 1 https://github.com/sirpdboy/luci-app-netdata package/AddPack/luci-app-netdata
@@ -81,10 +77,6 @@ git clone --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon package/AddP
 # Alist
 git clone --depth 1 https://github.com/alist-org/alist package/AddPack/alist
 git clone --depth 1 https://github.com/sbwml/luci-app-alist package/AddPack/luci-app-alist
-
-# MosDNS
-git clone --depth 1 https://github.com/QiuSimons/openwrt-mos package/AddPack/mosdns
-git clone --depth 1 https://github.com/sbwml/luci-app-mosdns package/AddPack/luci-app-mosdns
 
 # DDNS Go
 git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go package/AddPack/luci-app-ddns-go
