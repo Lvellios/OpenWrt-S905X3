@@ -6,11 +6,11 @@ on:
     - cron: 3 2 3 * *
 
 env:
-  REPO_URL: https://github.com/openwrt/openwrt openwrt
+  REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: openwrt.config
-  DIY_SCRIPT: openwrt.sh
+  CONFIG_FILE: .config
+  DIY_SCRIPT: ExtraPack.sh
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Canada/Atlantic
