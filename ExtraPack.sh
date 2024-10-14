@@ -45,6 +45,9 @@ git clone --depth 1 https://github.com/jerrykuku/lua-maxminddb package/ExtraPack
 git clone --depth 1 https://github.com/brvphoenix/wrtbwmon package/ExtraPack/wrtbwmon
 git clone --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon package/ExtraPack/luci-app-wrtbwmon
 
+# Turboacc
+curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
+
 # Alist
 git clone --depth 1 https://github.com/alist-org/alist package/ExtraPack/alist
 git clone --depth 1 https://github.com/sbwml/luci-app-alist package/ExtraPack/luci-app-alist
