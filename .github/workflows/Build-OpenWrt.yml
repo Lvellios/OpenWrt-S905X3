@@ -9,6 +9,7 @@ env:
   UPLOAD_COWTRANSFER: false
   RELEASE: true
   FILE_NAME: Amlogic S905X3 OpenWrt
+  TZ: Canada/Atlantic
 
 jobs:
   Toolchain:
