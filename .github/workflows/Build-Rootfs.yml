@@ -10,7 +10,7 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: Config/lede.config
-  DIY_SCRIPT: ExtraPack.sh
+  DIY_SCRIPT: Extra/ExtraPack.sh
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Canada/Atlantic
