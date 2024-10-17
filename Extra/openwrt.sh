@@ -10,33 +10,12 @@ sed -i 's/192.168.1.1/192.168.0.254/g' package/base-files/files/bin/config_gener
 git clone --depth 1 -b master https://github.com/jerrykuku/luci-theme-argon package/ExtraPack/luci-theme-argon
 git clone --depth 1 -b master https://github.com/jerrykuku/luci-app-argon-config package/ExtraPack/luci-app-argon-config
 
-# Pack
-git clone --depth 1 https://github.com/chenmozhijin/luci-app-socat package/ExtraPack/luci-app-socat
-
-# Xray
-# git clone --depth 1 https://github.com/yichya/luci-app-xray package/ExtraPack/luci-app-xray
-git clone --depth 1 https://github.com/honwen/luci-app-xray package/ExtraPack/luci-app-xray
-
 # Netdata
 git clone --depth 1 https://github.com/sirpdboy/luci-app-netdata package/ExtraPack/luci-app-netdata
 
 # Bandwidth Monitor
 git clone --depth 1 https://github.com/brvphoenix/wrtbwmon package/ExtraPack/wrtbwmon
 git clone --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon package/ExtraPack/luci-app-wrtbwmon
-
-# Turbo ACC
-git clone -n --depth 1 --filter=tree:0 https://github.com/chenmozhijin/turboacc package/ExtraPack/turboacc
-git -C package/ExtraPack/turboacc/ sparse-checkout set --no-cone luci-app-turboacc
-git -C package/ExtraPack/turboacc/ checkout
-mv package/ExtraPack/turboacc/luci-app-turboacc package/ExtraPack/
-rm -rf package/ExtraPack/turboacc/
-
-# Shortcut-fe
-git clone -n --depth 1 --filter=tree:0 https://github.com/fall513/fast-classifier package/kernel/shortcut
-git -C package/kernel/shortcut/ sparse-checkout set --no-cone shortcut-fe
-git -C package/kernel/shortcut/ checkout
-mv package/kernel/shortcut/package/kernel/shortcut-fe package/kernel/
-rm -rf package/kernel/shortcut
 
 ## UnTested
 # git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-status package/ExtraPack/luci-app-cpu-status
