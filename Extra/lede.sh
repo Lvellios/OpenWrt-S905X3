@@ -22,9 +22,6 @@ rm -rf feeds/luci/themes/luci-theme-netgear
 git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/ExtraPack/luci-theme-argon
 git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config package/ExtraPack/luci-app-argon-config
 
-# Xray
-git clone --depth 1 https://github.com/yichya/luci-app-xray package/ExtraPack/luci-app-xray
-
 ## UnTested
 # git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-status package/ExtraPack/luci-app-cpu-status
 # git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-status-mini package/ExtraPack/luci-app-cpu-status-mini
