@@ -23,8 +23,7 @@ git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon packa
 git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config package/ExtraPack/luci-app-argon-config
 
 # Xray
-# git clone --depth 1 https://github.com/yichya/luci-app-xray package/ExtraPack/luci-app-xray
-git clone --depth 1 https://github.com/honwen/luci-app-xray package/ExtraPack/luci-app-xray
+git clone --depth 1 https://github.com/yichya/luci-app-xray package/ExtraPack/luci-app-xray
 
 ## UnTested
 # git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-status package/ExtraPack/luci-app-cpu-status
