@@ -1,9 +1,6 @@
 name: OpenWrt RootFS
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: 3 2 3 * *
+on: workflow_dispatch
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
