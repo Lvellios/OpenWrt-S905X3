@@ -6,7 +6,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: Config/lede.config
+  CONFIG_FILE: Config/lede
   EXTRA_PACK: Extra/lede.sh
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true

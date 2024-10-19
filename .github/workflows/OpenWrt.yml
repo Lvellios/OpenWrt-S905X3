@@ -6,7 +6,7 @@ env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: Config/openwrt.config
+  CONFIG_FILE: Config/openwrt
   EXTRA_PACK: Extra/openwrt.sh
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
