@@ -115,9 +115,10 @@ jobs:
       id: organize
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
+        tar -czf openwrt/dl.tar.gz openwrt/dl
+        mv openwrt/dl.tar.gz openwrt/bin/targets/*/*/
         cd openwrt/bin/targets/*/*
         rm -rf packages feeds.buildinfo version.buildinfo *.manifest *.bin *.img *.vmdk
-        tar -czf dl.tar.gz /openwrt/dl
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "status=success" >> $GITHUB_OUTPUT
 
