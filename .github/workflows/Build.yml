@@ -1,9 +1,6 @@
 name: Build
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: 3 2 6 * *
+on: workflow_dispatch
 
 env:
   UPLOAD_COWTRANSFER: false
