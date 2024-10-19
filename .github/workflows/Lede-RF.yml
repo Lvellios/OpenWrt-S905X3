@@ -1,9 +1,6 @@
 name: Lede RootFS
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: 3 2 3 * *
+on: orkflow_dispatch
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
