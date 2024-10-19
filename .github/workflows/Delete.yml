@@ -1,8 +1,5 @@
 name: Delete Old
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: 3 2 12 * *
+on: workflow_dispatch
 
 jobs:
   del_runs:
